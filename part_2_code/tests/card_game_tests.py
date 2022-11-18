@@ -2,7 +2,7 @@ import unittest
 from src.card import Card
 from src.card_game import CardGame
 
-class TestCardGame:
+class TestCardGame(unittest.TestCase):
     def setUp(self):
         self.card_game = CardGame()
         self.card_ace = Card("clubs", 1)
