@@ -16,10 +16,11 @@ Only comment on errors that would stop the tests running.
 
 class CardGame:
 
-
   def check_for_ace(self, card):
+  # `if` statements evaluate an expression as their condition, in python assignments are statements and not expressions so they're not valid in the condition of an `if` statement.  It looks like this should use `==` not `=` to test for equality
     if card.value = 1:
       return True
+    # missing `:` after else
     else
       return False
    
@@ -39,6 +40,7 @@ def cards_total(self, cards):
   total
   for card in cards:
     total += card.value
+    # total is storing an integer, but python doesn't allow the catenation of strings and integers, so the integer would need to be explicitly converted to a string with `str(...)` for this to work
     return "You have a total of" + total
   
 ```
